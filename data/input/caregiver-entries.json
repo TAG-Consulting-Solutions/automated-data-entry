@@ -1,0 +1,151 @@
+{
+    "source": "client-browser",
+    "submittedAt": "2026-03-31T14:30:00Z",
+    "submittedBy": "Seun Solesi",
+    "type": "non-skilled",
+    "entries": [
+        {
+            "patientName": "Roberts, Stanley Joseph",
+            "servicePayer": "Triwest Personal Care Locality 18",
+            "employeeName": "Huerta, Abilene",
+            "employeeQualification": "Caregiver",
+            "visitDate": "03/30/2026",
+            "visitStart": "12:00 PM",
+            "visitEnd": "05:00 PM",
+            "visitDuration": 300,
+            "medicalOrder": "ADLs"
+        },
+        {
+            "patientName": "Roberts, Stanley",
+            "servicePayer": "Triwest - Personal Care - Locality 18",
+            "employeeName": "Huerta, Abilene",
+            "employeeQualification": "Caregiver",
+            "visitDate": "03/31/2026",
+            "visitStart": "12:00 PM",
+            "visitEnd": "05:00 PM",
+            "visitDuration": 300,
+            "medicalOrder": "ADLs"
+        },
+        {
+            "patientName": "Thompson, James",
+            "servicePayer": "Triwest - Personal Care - Locality 18",
+            "employeeName": "Guerra, Brendalee",
+            "employeeQualification": "Caregiver",
+            "visitDate": "04/01/2026",
+            "visitStart": "08:00 AM",
+            "visitEnd": "04:00 PM",
+            "visitDuration": 480,
+            "medicalOrder": "ADLs"
+        },
+        {
+            "patientName": "Jackson, Eleanor",
+            "servicePayer": "Triwest CNA Care Locality 18",
+            "employeeName": "Brown, Marcus",
+            "employeeQualification": "CNA",
+            "visitDate": "04/02/2026",
+            "visitStart": "10:00 AM",
+            "visitEnd": "02:00 PM",
+            "visitDuration": 240,
+            "medicalOrder": "ADLs"
+        },
+        {
+            "patientName": "Anderson, William",
+            "servicePayer": "Aetna - Home Health Aide - Standard",
+            "employeeName": "Foster, Angela",
+            "employeeQualification": "HHA",
+            "visitDate": "04/02/2026",
+            "visitStart": "07:00 AM",
+            "visitEnd": "03:00 PM",
+            "visitDuration": 480,
+            "medicalOrder": "ADLs"
+        },
+        {
+            "patientName": "Davis, Patricia",
+            "servicePayer": "Triwest Personal Care Loc 18",
+            "employeeName": "Patel, Lisa",
+            "employeeQualification": "Caregiver",
+            "visitDate": "04/03/2026",
+            "visitStart": "09:00 AM",
+            "visitEnd": "02:00 PM",
+            "visitDuration": 300,
+            "medicalOrder": "ADLs"
+        },
+        {
+            "patientName": "Thompson, James",
+            "servicePayer": "Triwest - Personal Care - Locality 18",
+            "employeeName": "Huerta, Abilene",
+            "employeeQualification": "Caregiver",
+            "visitDate": "04/03/2026",
+            "visitStart": "12:00 PM",
+            "visitEnd": "05:00 PM",
+            "visitDuration": 300,
+            "medicalOrder": "ADLs"
+        },
+        {
+            "patientName": "Jackson, Eleanor",
+            "servicePayer": "Aetna - Home Health Aide - Standard",
+            "employeeName": "Ramirez, Carlos",
+            "employeeQualification": "HHA",
+            "visitDate": "04/04/2026",
+            "visitStart": "08:00 AM",
+            "visitEnd": "04:00 PM",
+            "visitDuration": 480,
+            "medicalOrder": "ADLs"
+        },
+        {
+            "patientName": "Morgan, Diane",
+            "servicePayer": "Triwest - Personal Care - Locality 18",
+            "employeeName": "Guerra, Brendalee",
+            "employeeQualification": "Caregiver",
+            "visitDate": "04/05/2026",
+            "visitStart": "09:00 AM",
+            "visitEnd": "02:00 PM",
+            "visitDuration": 300,
+            "medicalOrder": "ADLs"
+        },
+        {
+            "patientName": "Roberts, Stanley Joseph",
+            "servicePayer": "Triwest - Personal Care - Locality 18",
+            "employeeName": "Santos, Miguel",
+            "employeeQualification": "Caregiver",
+            "visitDate": "04/05/2026",
+            "visitStart": "12:00 PM",
+            "visitEnd": "05:00 PM",
+            "visitDuration": 300,
+            "medicalOrder": "ADLs"
+        },
+        {
+            "patientName": "Thompson, James",
+            "servicePayer": "Triwest - Personal Care - Locality 18",
+            "employeeName": "Huerta, Abilene",
+            "employeeQualification": "Caregiver",
+            "visitDate": "04/05/2026",
+            "visitStart": "03:00 PM",
+            "visitEnd": "09:00 AM",
+            "visitDuration": -360,
+            "medicalOrder": "ADLs"
+        },
+        {
+            "patientName": "Jackson, Eleanor",
+            "servicePayer": "Triwest CNA Care Locality 18",
+            "employeeName": "Brown, Marcus",
+            "employeeQualification": "CNA",
+            "visitDate": null,
+            "visitStart": "10:00 AM",
+            "visitEnd": "02:00 PM",
+            "visitDuration": 240,
+            "medicalOrder": "ADLs"
+        },
+        {
+            "patientName": "Davis, Patricia",
+            "servicePayer": "UnitedHealth Group Premium Select",
+            "employeeName": "Patel, Lisa",
+            "employeeQualification": "Caregiver",
+            "visitDate": "04/06/2026",
+            "visitStart": "09:00 AM",
+            "visitEnd": "02:00 PM",
+            "visitDuration": 300,
+            "medicalOrder": "ADLs"
+        }
+    ]
+}

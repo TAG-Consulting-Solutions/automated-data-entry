@@ -1,0 +1,752 @@
+{
+    "processedAt": "2026-04-01T05:10:59.844Z",
+    "processedBy": "LLM Scheduling Agent",
+    "summary": {
+        "totalEntries": 30,
+        "success": 11,
+        "warnings": 8,
+        "failures": 11
+    },
+    "results": [
+        {
+            "status": "SUCCESS",
+            "message": "Shift created successfully. All fields matched exactly.",
+            "input": {
+                "patientName": "King, Coleman",
+                "servicePayer": "MTI America RN 1.5.0",
+                "employeeName": "Ogundipe, Tolani",
+                "employeeQualification": "RN",
+                "visitDate": "03/30/2026",
+                "visitStart": "08:00 AM",
+                "visitEnd": "09:00 AM",
+                "visitDuration": 60,
+                "medicalOrder": "Woundcare"
+            },
+            "resolved": {
+                "patientId": 1001,
+                "patientName": "King, Coleman",
+                "productPayerId": "P002",
+                "productPayerName": "MTI America RN 1.5.0",
+                "employeeId": "E001",
+                "employeeName": "Ogundipe, Tolani",
+                "position": "RN",
+                "start": "03/30/2026 08:00 AM",
+                "end": "03/30/2026 09:00 AM"
+            },
+            "warnings": []
+        },
+        {
+            "status": "WARNING",
+            "message": "Shift created with caveats. Review warnings below.",
+            "input": {
+                "patientName": "King, Coleman",
+                "servicePayer": "MTI America LPN/LVN 1.4",
+                "employeeName": "Walker, Norris",
+                "employeeQualification": "LPN/LVN",
+                "visitDate": "03/30/2026",
+                "visitStart": "08:00 AM",
+                "visitEnd": "09:00 AM",
+                "visitDuration": 60,
+                "medicalOrder": "Evaluation and Treatment"
+            },
+            "resolved": {
+                "patientId": 1001,
+                "patientName": "King, Coleman",
+                "productPayerId": "P001",
+                "productPayerName": "MTI America LPN/LVN 1.4.0",
+                "employeeId": "E002",
+                "employeeName": "Walker, Norris",
+                "position": "LPN/LVN",
+                "start": "03/30/2026 08:00 AM",
+                "end": "03/30/2026 09:00 AM"
+            },
+            "warnings": [
+                "Service payer fuzzy matched: 'MTI America LPN/LVN 1.4' → 'MTI America LPN/LVN 1.4.0' (The input matches closely, with only a missing '.0' at the end.)"
+            ]
+        },
+        {
+            "status": "SUCCESS",
+            "message": "Shift created successfully. All fields matched exactly.",
+            "input": {
+                "patientName": "Gonzalez, Maria",
+                "servicePayer": "Aetna Skilled Nursing RN Standard",
+                "employeeName": "Mitchell, Sarah",
+                "employeeQualification": "RN",
+                "visitDate": "03/31/2026",
+                "visitStart": "08:00 AM",
+                "visitEnd": "09:00 AM",
+                "visitDuration": 60,
+                "medicalOrder": "Injection"
+            },
+            "resolved": {
+                "patientId": 1003,
+                "patientName": "Gonzalez, Maria",
+                "productPayerId": "P006",
+                "productPayerName": "Aetna - Skilled Nursing RN - Standard",
+                "employeeId": "E005",
+                "employeeName": "Mitchell, Sarah",
+                "position": "RN",
+                "start": "03/31/2026 08:00 AM",
+                "end": "03/31/2026 09:00 AM"
+            },
+            "warnings": []
+        },
+        {
+            "status": "WARNING",
+            "message": "Shift created with caveats. Review warnings below.",
+            "input": {
+                "patientName": "Williams, Dorothy",
+                "servicePayer": "MTI America RN 1.5",
+                "employeeName": "Reyes, Jennifer",
+                "employeeQualification": "RN",
+                "visitDate": "04/01/2026",
+                "visitStart": "08:00 AM",
+                "visitEnd": "09:00 AM",
+                "visitDuration": 60,
+                "medicalOrder": "Woundvac"
+            },
+            "resolved": {
+                "patientId": 1005,
+                "patientName": "Williams, Dorothy",
+                "productPayerId": "P002",
+                "productPayerName": "MTI America RN 1.5.0",
+                "employeeId": "E009",
+                "employeeName": "Reyes, Jennifer",
+                "position": "RN",
+                "start": "04/01/2026 08:00 AM",
+                "end": "04/01/2026 09:00 AM"
+            },
+            "warnings": [
+                "Service payer fuzzy matched: 'MTI America RN 1.5' → 'MTI America RN 1.5.0' (Minor version digit difference (1.5 vs 1.5.0).)"
+            ]
+        },
+        {
+            "status": "WARNING",
+            "message": "Shift created with caveats. Review warnings below.",
+            "input": {
+                "patientName": "Chen, Henry",
+                "servicePayer": "MTI America 6 Hrs Date Range Authorization CKPO",
+                "employeeName": "Ogundipe, Tolani",
+                "employeeQualification": "RN",
+                "visitDate": "04/01/2026",
+                "visitStart": "08:00 AM",
+                "visitEnd": "09:00 AM",
+                "visitDuration": 60,
+                "medicalOrder": "G-tube Feeding"
+            },
+            "resolved": {
+                "patientId": 1006,
+                "patientName": "Chen, Henry",
+                "productPayerId": "P003",
+                "productPayerName": "MTI America 6 Hrs Date Range Authorization CKPO 03052026",
+                "employeeId": "E001",
+                "employeeName": "Ogundipe, Tolani",
+                "position": "RN",
+                "start": "04/01/2026 08:00 AM",
+                "end": "04/01/2026 09:00 AM"
+            },
+            "warnings": [
+                "Service payer fuzzy matched: 'MTI America 6 Hrs Date Range Authorization CKPO' → 'MTI America 6 Hrs Date Range Authorization CKPO 03052026' (Close match, but includes a date 03052026)"
+            ]
+        },
+        {
+            "status": "WARNING",
+            "message": "Shift created with caveats. Review warnings below.",
+            "input": {
+                "patientName": "Martinez, Robert",
+                "servicePayer": "MTI Amer LPN 1.4.0",
+                "employeeName": "Nguyen, David",
+                "employeeQualification": "LPN/LVN",
+                "visitDate": "04/02/2026",
+                "visitStart": "08:00 AM",
+                "visitEnd": "09:00 AM",
+                "visitDuration": 60,
+                "medicalOrder": "Evaluation and Treatment"
+            },
+            "resolved": {
+                "patientId": 1008,
+                "patientName": "Martinez, Robert",
+                "productPayerId": "P001",
+                "productPayerName": "MTI America LPN/LVN 1.4.0",
+                "employeeId": "E006",
+                "employeeName": "Nguyen, David",
+                "position": "LPN/LVN",
+                "start": "04/02/2026 08:00 AM",
+                "end": "04/02/2026 09:00 AM"
+            },
+            "warnings": [
+                "Service payer fuzzy matched: 'MTI Amer LPN 1.4.0' → 'MTI America LPN/LVN 1.4.0' (The input is very similar to this option, with a slight variation in the name (LPN vs LPN/LVN).)"
+            ]
+        },
+        {
+            "status": "WARNING",
+            "message": "Shift created with caveats. Review warnings below.",
+            "input": {
+                "patientName": "King, Colman",
+                "servicePayer": "MTI America RN 1.5.0",
+                "employeeName": "Ogundipe, Tolani",
+                "employeeQualification": "RN",
+                "visitDate": "04/03/2026",
+                "visitStart": "08:00 AM",
+                "visitEnd": "09:00 AM",
+                "visitDuration": 60,
+                "medicalOrder": "Woundcare"
+            },
+            "resolved": {
+                "patientId": 1001,
+                "patientName": "King, Coleman",
+                "productPayerId": "P002",
+                "productPayerName": "MTI America RN 1.5.0",
+                "employeeId": "E001",
+                "employeeName": "Ogundipe, Tolani",
+                "position": "RN",
+                "start": "04/03/2026 08:00 AM",
+                "end": "04/03/2026 09:00 AM"
+            },
+            "warnings": [
+                "Patient name fuzzy matched: 'King, Colman' → 'King, Coleman' (Minor typo in last name (Colman vs Coleman))"
+            ]
+        },
+        {
+            "status": "SUCCESS",
+            "message": "Shift created successfully. All fields matched exactly.",
+            "input": {
+                "patientName": "Gonzalez, Maria",
+                "servicePayer": "Aetna - Skilled Nursing RN - Standard",
+                "employeeName": "Reyes, Jennifer",
+                "employeeQualification": "RN",
+                "visitDate": "04/03/2026",
+                "visitStart": "08:00 AM",
+                "visitEnd": "09:00 AM",
+                "visitDuration": 60,
+                "medicalOrder": "Injection"
+            },
+            "resolved": {
+                "patientId": 1003,
+                "patientName": "Gonzalez, Maria",
+                "productPayerId": "P006",
+                "productPayerName": "Aetna - Skilled Nursing RN - Standard",
+                "employeeId": "E009",
+                "employeeName": "Reyes, Jennifer",
+                "position": "RN",
+                "start": "04/03/2026 08:00 AM",
+                "end": "04/03/2026 09:00 AM"
+            },
+            "warnings": []
+        },
+        {
+            "status": "SUCCESS",
+            "message": "Shift created successfully. All fields matched exactly.",
+            "input": {
+                "patientName": "Anderson, William",
+                "servicePayer": "Aetna - Skilled Nursing RN - Standard",
+                "employeeName": "Ogundipe, Tolani",
+                "employeeQualification": "RN",
+                "visitDate": "04/04/2026",
+                "visitStart": "08:00 AM",
+                "visitEnd": "09:25 AM",
+                "visitDuration": 85,
+                "medicalOrder": "Infusion"
+            },
+            "resolved": {
+                "patientId": 1010,
+                "patientName": "Anderson, William",
+                "productPayerId": "P006",
+                "productPayerName": "Aetna - Skilled Nursing RN - Standard",
+                "employeeId": "E001",
+                "employeeName": "Ogundipe, Tolani",
+                "position": "RN",
+                "start": "04/04/2026 08:00 AM",
+                "end": "04/04/2026 09:25 AM"
+            },
+            "warnings": []
+        },
+        {
+            "status": "SUCCESS",
+            "message": "Shift created successfully. All fields matched exactly.",
+            "input": {
+                "patientName": "Williams, Dorothy",
+                "servicePayer": "MTI America RN 1.5.0",
+                "employeeName": "Mitchell, Sarah",
+                "employeeQualification": "RN",
+                "visitDate": "04/04/2026",
+                "visitStart": "08:00 AM",
+                "visitEnd": "10:30 AM",
+                "visitDuration": 150,
+                "medicalOrder": "Infusion"
+            },
+            "resolved": {
+                "patientId": 1005,
+                "patientName": "Williams, Dorothy",
+                "productPayerId": "P002",
+                "productPayerName": "MTI America RN 1.5.0",
+                "employeeId": "E005",
+                "employeeName": "Mitchell, Sarah",
+                "position": "RN",
+                "start": "04/04/2026 08:00 AM",
+                "end": "04/04/2026 10:30 AM"
+            },
+            "warnings": []
+        },
+        {
+            "status": "SUCCESS",
+            "message": "Shift created successfully. All fields matched exactly.",
+            "input": {
+                "patientName": "Chen, Henry",
+                "servicePayer": "Aetna Skilled Nursing RN Standard",
+                "employeeName": "Reyes, Jennifer",
+                "employeeQualification": "RN",
+                "visitDate": "04/05/2026",
+                "visitStart": "08:00 AM",
+                "visitEnd": "09:45 AM",
+                "visitDuration": 105,
+                "medicalOrder": "Infusion"
+            },
+            "resolved": {
+                "patientId": 1006,
+                "patientName": "Chen, Henry",
+                "productPayerId": "P006",
+                "productPayerName": "Aetna - Skilled Nursing RN - Standard",
+                "employeeId": "E009",
+                "employeeName": "Reyes, Jennifer",
+                "position": "RN",
+                "start": "04/05/2026 08:00 AM",
+                "end": "04/05/2026 09:45 AM"
+            },
+            "warnings": []
+        },
+        {
+            "status": "FAILURE",
+            "message": "No patient matching 'Baxter, Jonathan' found in the system",
+            "input": {
+                "patientName": "Baxter, Jonathan",
+                "servicePayer": "MTI America RN 1.5.0",
+                "employeeName": "Ogundipe, Tolani",
+                "employeeQualification": "RN",
+                "visitDate": "04/04/2026",
+                "visitStart": "08:00 AM",
+                "visitEnd": "09:00 AM",
+                "visitDuration": 60,
+                "medicalOrder": "Woundcare"
+            },
+            "resolved": null,
+            "errors": [
+                "No patient matching 'Baxter, Jonathan' found in the system"
+            ]
+        },
+        {
+            "status": "FAILURE",
+            "message": "Employee 'Rodriguez, Carmen' not found in available RN employees (available: Ogundipe, Tolani, Mitchell, Sarah, Reyes, Jennifer)",
+            "input": {
+                "patientName": "King, Coleman",
+                "servicePayer": "MTI America RN 1.5.0",
+                "employeeName": "Rodriguez, Carmen",
+                "employeeQualification": "RN",
+                "visitDate": "04/04/2026",
+                "visitStart": "08:00 AM",
+                "visitEnd": "09:00 AM",
+                "visitDuration": 60,
+                "medicalOrder": "Injection"
+            },
+            "resolved": null,
+            "errors": [
+                "Employee 'Rodriguez, Carmen' not found in available RN employees (available: Ogundipe, Tolani, Mitchell, Sarah, Reyes, Jennifer)"
+            ]
+        },
+        {
+            "status": "FAILURE",
+            "message": "Employee 'Washington, Kevin' not found in available LPN/LVN employees (available: Walker, Norris, Nguyen, David, Reyes, Jennifer)",
+            "input": {
+                "patientName": "Martinez, Robert",
+                "servicePayer": "MTI America LPN/LVN 1.4.0",
+                "employeeName": "Washington, Kevin",
+                "employeeQualification": "LPN/LVN",
+                "visitDate": "04/04/2026",
+                "visitStart": "08:00 AM",
+                "visitEnd": "09:00 AM",
+                "visitDuration": 60,
+                "medicalOrder": "Evaluation and Treatment"
+            },
+            "resolved": null,
+            "errors": [
+                "Employee 'Washington, Kevin' not found in available LPN/LVN employees (available: Walker, Norris, Nguyen, David, Reyes, Jennifer)"
+            ]
+        },
+        {
+            "status": "FAILURE",
+            "message": "Employee 'Guerra, Brendalee' not found in available RN employees (available: Ogundipe, Tolani, Mitchell, Sarah, Reyes, Jennifer)",
+            "input": {
+                "patientName": "Gonzalez, Maria",
+                "servicePayer": "Aetna - Skilled Nursing RN - Standard",
+                "employeeName": "Guerra, Brendalee",
+                "employeeQualification": "Caregiver",
+                "visitDate": "04/04/2026",
+                "visitStart": "08:00 AM",
+                "visitEnd": "09:00 AM",
+                "visitDuration": 60,
+                "medicalOrder": "Woundcare"
+            },
+            "resolved": null,
+            "errors": [
+                "Employee 'Guerra, Brendalee' not found in available RN employees (available: Ogundipe, Tolani, Mitchell, Sarah, Reyes, Jennifer)"
+            ]
+        },
+        {
+            "status": "FAILURE",
+            "message": "No service payer matching 'BlueCross BlueShield PPO Gold Plan' found (No similar payer found in available options.)",
+            "input": {
+                "patientName": "Anderson, William",
+                "servicePayer": "BlueCross BlueShield PPO Gold Plan",
+                "employeeName": "Ogundipe, Tolani",
+                "employeeQualification": "RN",
+                "visitDate": "04/05/2026",
+                "visitStart": "08:00 AM",
+                "visitEnd": "09:00 AM",
+                "visitDuration": 60,
+                "medicalOrder": "Injection"
+            },
+            "resolved": null,
+            "errors": [
+                "No service payer matching 'BlueCross BlueShield PPO Gold Plan' found (No similar payer found in available options.)"
+            ]
+        },
+        {
+            "status": "FAILURE",
+            "message": "Employee Ogundipe, Tolani already has a shift from 2026-03-30T12:00:00.000Z to 2026-03-30T13:00:00.000Z",
+            "input": {
+                "patientName": "Gonzalez, Maria",
+                "servicePayer": "Aetna - Skilled Nursing RN - Standard",
+                "employeeName": "Ogundipe, Tolani",
+                "employeeQualification": "RN",
+                "visitDate": "03/30/2026",
+                "visitStart": "08:00 AM",
+                "visitEnd": "09:00 AM",
+                "visitDuration": 60,
+                "medicalOrder": "Evaluation and Treatment"
+            },
+            "resolved": null,
+            "errors": [
+                "Employee Ogundipe, Tolani already has a shift from 2026-03-30T12:00:00.000Z to 2026-03-30T13:00:00.000Z"
+            ]
+        },
+        {
+            "status": "WARNING",
+            "message": "Shift created with caveats. Review warnings below.",
+            "input": {
+                "patientName": "Roberts, Stanley Joseph",
+                "servicePayer": "Triwest Personal Care Locality 18",
+                "employeeName": "Huerta, Abilene",
+                "employeeQualification": "Caregiver",
+                "visitDate": "03/30/2026",
+                "visitStart": "12:00 PM",
+                "visitEnd": "05:00 PM",
+                "visitDuration": 300,
+                "medicalOrder": "ADLs"
+            },
+            "resolved": {
+                "patientId": 1002,
+                "patientName": "Roberts, Stanley Joseph",
+                "productPayerId": "P004",
+                "productPayerName": "Triwest - Personal Care - Locality 18",
+                "employeeId": "E003",
+                "employeeName": "Huerta, Abilene",
+                "position": "Caregiver",
+                "start": "03/30/2026 12:00 PM",
+                "end": "03/30/2026 05:00 PM"
+            },
+            "warnings": [
+                "Service payer fuzzy matched: 'Triwest Personal Care Locality 18' → 'Triwest - Personal Care - Locality 18' (Minor formatting difference (missing dash))"
+            ]
+        },
+        {
+            "status": "WARNING",
+            "message": "Shift created with caveats. Review warnings below.",
+            "input": {
+                "patientName": "Roberts, Stanley",
+                "servicePayer": "Triwest - Personal Care - Locality 18",
+                "employeeName": "Huerta, Abilene",
+                "employeeQualification": "Caregiver",
+                "visitDate": "03/31/2026",
+                "visitStart": "12:00 PM",
+                "visitEnd": "05:00 PM",
+                "visitDuration": 300,
+                "medicalOrder": "ADLs"
+            },
+            "resolved": {
+                "patientId": 1002,
+                "patientName": "Roberts, Stanley Joseph",
+                "productPayerId": "P004",
+                "productPayerName": "Triwest - Personal Care - Locality 18",
+                "employeeId": "E003",
+                "employeeName": "Huerta, Abilene",
+                "position": "Caregiver",
+                "start": "03/31/2026 12:00 PM",
+                "end": "03/31/2026 05:00 PM"
+            },
+            "warnings": [
+                "Patient name fuzzy matched: 'Roberts, Stanley' → 'Roberts, Stanley Joseph' (Partial match on name)"
+            ]
+        },
+        {
+            "status": "SUCCESS",
+            "message": "Shift created successfully. All fields matched exactly.",
+            "input": {
+                "patientName": "Thompson, James",
+                "servicePayer": "Triwest - Personal Care - Locality 18",
+                "employeeName": "Guerra, Brendalee",
+                "employeeQualification": "Caregiver",
+                "visitDate": "04/01/2026",
+                "visitStart": "08:00 AM",
+                "visitEnd": "04:00 PM",
+                "visitDuration": 480,
+                "medicalOrder": "ADLs"
+            },
+            "resolved": {
+                "patientId": 1004,
+                "patientName": "Thompson, James",
+                "productPayerId": "P004",
+                "productPayerName": "Triwest - Personal Care - Locality 18",
+                "employeeId": "E004",
+                "employeeName": "Guerra, Brendalee",
+                "position": "Caregiver",
+                "start": "04/01/2026 08:00 AM",
+                "end": "04/01/2026 04:00 PM"
+            },
+            "warnings": []
+        },
+        {
+            "status": "SUCCESS",
+            "message": "Shift created successfully. All fields matched exactly.",
+            "input": {
+                "patientName": "Jackson, Eleanor",
+                "servicePayer": "Triwest CNA Care Locality 18",
+                "employeeName": "Brown, Marcus",
+                "employeeQualification": "CNA",
+                "visitDate": "04/02/2026",
+                "visitStart": "10:00 AM",
+                "visitEnd": "02:00 PM",
+                "visitDuration": 240,
+                "medicalOrder": "ADLs"
+            },
+            "resolved": {
+                "patientId": 1009,
+                "patientName": "Jackson, Eleanor",
+                "productPayerId": "P007",
+                "productPayerName": "Triwest - CNA Care - Locality 18",
+                "employeeId": "E008",
+                "employeeName": "Brown, Marcus",
+                "position": "CNA",
+                "start": "04/02/2026 10:00 AM",
+                "end": "04/02/2026 02:00 PM"
+            },
+            "warnings": []
+        },
+        {
+            "status": "SUCCESS",
+            "message": "Shift created successfully. All fields matched exactly.",
+            "input": {
+                "patientName": "Anderson, William",
+                "servicePayer": "Aetna - Home Health Aide - Standard",
+                "employeeName": "Foster, Angela",
+                "employeeQualification": "HHA",
+                "visitDate": "04/02/2026",
+                "visitStart": "07:00 AM",
+                "visitEnd": "03:00 PM",
+                "visitDuration": 480,
+                "medicalOrder": "ADLs"
+            },
+            "resolved": {
+                "patientId": 1010,
+                "patientName": "Anderson, William",
+                "productPayerId": "P005",
+                "productPayerName": "Aetna - Home Health Aide - Standard",
+                "employeeId": "E007",
+                "employeeName": "Foster, Angela",
+                "position": "HHA",
+                "start": "04/02/2026 07:00 AM",
+                "end": "04/02/2026 03:00 PM"
+            },
+            "warnings": []
+        },
+        {
+            "status": "WARNING",
+            "message": "Shift created with caveats. Review warnings below.",
+            "input": {
+                "patientName": "Davis, Patricia",
+                "servicePayer": "Triwest Personal Care Loc 18",
+                "employeeName": "Patel, Lisa",
+                "employeeQualification": "Caregiver",
+                "visitDate": "04/03/2026",
+                "visitStart": "09:00 AM",
+                "visitEnd": "02:00 PM",
+                "visitDuration": 300,
+                "medicalOrder": "ADLs"
+            },
+            "resolved": {
+                "patientId": 1007,
+                "patientName": "Davis, Patricia",
+                "productPayerId": "P004",
+                "productPayerName": "Triwest - Personal Care - Locality 18",
+                "employeeId": "E011",
+                "employeeName": "Patel, Lisa",
+                "position": "Caregiver",
+                "start": "04/03/2026 09:00 AM",
+                "end": "04/03/2026 02:00 PM"
+            },
+            "warnings": [
+                "Patient 'Davis, Patricia' has status 'On Hold'",
+                "Service payer fuzzy matched: 'Triwest Personal Care Loc 18' → 'Triwest - Personal Care - Locality 18' (Minor formatting difference (missing dashes, 'Locality' vs 'Loc'))"
+            ]
+        },
+        {
+            "status": "SUCCESS",
+            "message": "Shift created successfully. All fields matched exactly.",
+            "input": {
+                "patientName": "Thompson, James",
+                "servicePayer": "Triwest - Personal Care - Locality 18",
+                "employeeName": "Huerta, Abilene",
+                "employeeQualification": "Caregiver",
+                "visitDate": "04/03/2026",
+                "visitStart": "12:00 PM",
+                "visitEnd": "05:00 PM",
+                "visitDuration": 300,
+                "medicalOrder": "ADLs"
+            },
+            "resolved": {
+                "patientId": 1004,
+                "patientName": "Thompson, James",
+                "productPayerId": "P004",
+                "productPayerName": "Triwest - Personal Care - Locality 18",
+                "employeeId": "E003",
+                "employeeName": "Huerta, Abilene",
+                "position": "Caregiver",
+                "start": "04/03/2026 12:00 PM",
+                "end": "04/03/2026 05:00 PM"
+            },
+            "warnings": []
+        },
+        {
+            "status": "SUCCESS",
+            "message": "Shift created successfully. All fields matched exactly.",
+            "input": {
+                "patientName": "Jackson, Eleanor",
+                "servicePayer": "Aetna - Home Health Aide - Standard",
+                "employeeName": "Ramirez, Carlos",
+                "employeeQualification": "HHA",
+                "visitDate": "04/04/2026",
+                "visitStart": "08:00 AM",
+                "visitEnd": "04:00 PM",
+                "visitDuration": 480,
+                "medicalOrder": "ADLs"
+            },
+            "resolved": {
+                "patientId": 1009,
+                "patientName": "Jackson, Eleanor",
+                "productPayerId": "P005",
+                "productPayerName": "Aetna - Home Health Aide - Standard",
+                "employeeId": "E010",
+                "employeeName": "Ramirez, Carlos",
+                "position": "HHA",
+                "start": "04/04/2026 08:00 AM",
+                "end": "04/04/2026 04:00 PM"
+            },
+            "warnings": []
+        },
+        {
+            "status": "FAILURE",
+            "message": "No patient matching 'Morgan, Diane' found in the system",
+            "input": {
+                "patientName": "Morgan, Diane",
+                "servicePayer": "Triwest - Personal Care - Locality 18",
+                "employeeName": "Guerra, Brendalee",
+                "employeeQualification": "Caregiver",
+                "visitDate": "04/05/2026",
+                "visitStart": "09:00 AM",
+                "visitEnd": "02:00 PM",
+                "visitDuration": 300,
+                "medicalOrder": "ADLs"
+            },
+            "resolved": null,
+            "errors": [
+                "No patient matching 'Morgan, Diane' found in the system"
+            ]
+        },
+        {
+            "status": "FAILURE",
+            "message": "Employee 'Santos, Miguel' not found in available Caregiver employees (available: Huerta, Abilene, Guerra, Brendalee, Patel, Lisa)",
+            "input": {
+                "patientName": "Roberts, Stanley Joseph",
+                "servicePayer": "Triwest - Personal Care - Locality 18",
+                "employeeName": "Santos, Miguel",
+                "employeeQualification": "Caregiver",
+                "visitDate": "04/05/2026",
+                "visitStart": "12:00 PM",
+                "visitEnd": "05:00 PM",
+                "visitDuration": 300,
+                "medicalOrder": "ADLs"
+            },
+            "resolved": null,
+            "errors": [
+                "Employee 'Santos, Miguel' not found in available Caregiver employees (available: Huerta, Abilene, Guerra, Brendalee, Patel, Lisa)"
+            ]
+        },
+        {
+            "status": "FAILURE",
+            "message": "Multiple validation errors.",
+            "input": {
+                "patientName": "Thompson, James",
+                "servicePayer": "Triwest - Personal Care - Locality 18",
+                "employeeName": "Huerta, Abilene",
+                "employeeQualification": "Caregiver",
+                "visitDate": "04/05/2026",
+                "visitStart": "03:00 PM",
+                "visitEnd": "09:00 AM",
+                "visitDuration": -360,
+                "medicalOrder": "ADLs"
+            },
+            "resolved": null,
+            "errors": [
+                "Visit end time (09:00 AM) is before start time (03:00 PM)",
+                "Visit duration is negative: -360 minutes"
+            ]
+        },
+        {
+            "status": "FAILURE",
+            "message": "Required field 'visitDate' is missing or null",
+            "input": {
+                "patientName": "Jackson, Eleanor",
+                "servicePayer": "Triwest CNA Care Locality 18",
+                "employeeName": "Brown, Marcus",
+                "employeeQualification": "CNA",
+                "visitDate": null,
+                "visitStart": "10:00 AM",
+                "visitEnd": "02:00 PM",
+                "visitDuration": 240,
+                "medicalOrder": "ADLs"
+            },
+            "resolved": null,
+            "errors": [
+                "Required field 'visitDate' is missing or null"
+            ]
+        },
+        {
+            "status": "FAILURE",
+            "message": "No service payer matching 'UnitedHealth Group Premium Select' found (No reasonably similar option found.)",
+            "input": {
+                "patientName": "Davis, Patricia",
+                "servicePayer": "UnitedHealth Group Premium Select",
+                "employeeName": "Patel, Lisa",
+                "employeeQualification": "Caregiver",
+                "visitDate": "04/06/2026",
+                "visitStart": "09:00 AM",
+                "visitEnd": "02:00 PM",
+                "visitDuration": 300,
+                "medicalOrder": "ADLs"
+            },
+            "resolved": null,
+            "errors": [
+                "No service payer matching 'UnitedHealth Group Premium Select' found (No reasonably similar option found.)"
+            ]
+        }
+    ]
+}

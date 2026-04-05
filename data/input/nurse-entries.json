@@ -1,0 +1,195 @@
+{
+    "source": "client-browser",
+    "submittedAt": "2026-03-31T14:30:00Z",
+    "submittedBy": "Seun Solesi",
+    "type": "skilled",
+    "entries": [
+        {
+            "patientName": "King, Coleman",
+            "servicePayer": "MTI America RN 1.5.0",
+            "employeeName": "Ogundipe, Tolani",
+            "employeeQualification": "RN",
+            "visitDate": "03/30/2026",
+            "visitStart": "08:00 AM",
+            "visitEnd": "09:00 AM",
+            "visitDuration": 60,
+            "medicalOrder": "Woundcare"
+        },
+        {
+            "patientName": "King, Coleman",
+            "servicePayer": "MTI America LPN/LVN 1.4",
+            "employeeName": "Walker, Norris",
+            "employeeQualification": "LPN/LVN",
+            "visitDate": "03/30/2026",
+            "visitStart": "08:00 AM",
+            "visitEnd": "09:00 AM",
+            "visitDuration": 60,
+            "medicalOrder": "Evaluation and Treatment"
+        },
+        {
+            "patientName": "Gonzalez, Maria",
+            "servicePayer": "Aetna Skilled Nursing RN Standard",
+            "employeeName": "Mitchell, Sarah",
+            "employeeQualification": "RN",
+            "visitDate": "03/31/2026",
+            "visitStart": "08:00 AM",
+            "visitEnd": "09:00 AM",
+            "visitDuration": 60,
+            "medicalOrder": "Injection"
+        },
+        {
+            "patientName": "Williams, Dorothy",
+            "servicePayer": "MTI America RN 1.5",
+            "employeeName": "Reyes, Jennifer",
+            "employeeQualification": "RN",
+            "visitDate": "04/01/2026",
+            "visitStart": "08:00 AM",
+            "visitEnd": "09:00 AM",
+            "visitDuration": 60,
+            "medicalOrder": "Woundvac"
+        },
+        {
+            "patientName": "Chen, Henry",
+            "servicePayer": "MTI America 6 Hrs Date Range Authorization CKPO",
+            "employeeName": "Ogundipe, Tolani",
+            "employeeQualification": "RN",
+            "visitDate": "04/01/2026",
+            "visitStart": "08:00 AM",
+            "visitEnd": "09:00 AM",
+            "visitDuration": 60,
+            "medicalOrder": "G-tube Feeding"
+        },
+        {
+            "patientName": "Martinez, Robert",
+            "servicePayer": "MTI Amer LPN 1.4.0",
+            "employeeName": "Nguyen, David",
+            "employeeQualification": "LPN/LVN",
+            "visitDate": "04/02/2026",
+            "visitStart": "08:00 AM",
+            "visitEnd": "09:00 AM",
+            "visitDuration": 60,
+            "medicalOrder": "Evaluation and Treatment"
+        },
+        {
+            "patientName": "King, Colman",
+            "servicePayer": "MTI America RN 1.5.0",
+            "employeeName": "Ogundipe, Tolani",
+            "employeeQualification": "RN",
+            "visitDate": "04/03/2026",
+            "visitStart": "08:00 AM",
+            "visitEnd": "09:00 AM",
+            "visitDuration": 60,
+            "medicalOrder": "Woundcare"
+        },
+        {
+            "patientName": "Gonzalez, Maria",
+            "servicePayer": "Aetna - Skilled Nursing RN - Standard",
+            "employeeName": "Reyes, Jennifer",
+            "employeeQualification": "RN",
+            "visitDate": "04/03/2026",
+            "visitStart": "08:00 AM",
+            "visitEnd": "09:00 AM",
+            "visitDuration": 60,
+            "medicalOrder": "Injection"
+        },
+        {
+            "patientName": "Anderson, William",
+            "servicePayer": "Aetna - Skilled Nursing RN - Standard",
+            "employeeName": "Ogundipe, Tolani",
+            "employeeQualification": "RN",
+            "visitDate": "04/04/2026",
+            "visitStart": "08:00 AM",
+            "visitEnd": "09:25 AM",
+            "visitDuration": 85,
+            "medicalOrder": "Infusion"
+        },
+        {
+            "patientName": "Williams, Dorothy",
+            "servicePayer": "MTI America RN 1.5.0",
+            "employeeName": "Mitchell, Sarah",
+            "employeeQualification": "RN",
+            "visitDate": "04/04/2026",
+            "visitStart": "08:00 AM",
+            "visitEnd": "10:30 AM",
+            "visitDuration": 150,
+            "medicalOrder": "Infusion"
+        },
+        {
+            "patientName": "Chen, Henry",
+            "servicePayer": "Aetna Skilled Nursing RN Standard",
+            "employeeName": "Reyes, Jennifer",
+            "employeeQualification": "RN",
+            "visitDate": "04/05/2026",
+            "visitStart": "08:00 AM",
+            "visitEnd": "09:45 AM",
+            "visitDuration": 105,
+            "medicalOrder": "Infusion"
+        },
+        {
+            "patientName": "Baxter, Jonathan",
+            "servicePayer": "MTI America RN 1.5.0",
+            "employeeName": "Ogundipe, Tolani",
+            "employeeQualification": "RN",
+            "visitDate": "04/04/2026",
+            "visitStart": "08:00 AM",
+            "visitEnd": "09:00 AM",
+            "visitDuration": 60,
+            "medicalOrder": "Woundcare"
+        },
+        {
+            "patientName": "King, Coleman",
+            "servicePayer": "MTI America RN 1.5.0",
+            "employeeName": "Rodriguez, Carmen",
+            "employeeQualification": "RN",
+            "visitDate": "04/04/2026",
+            "visitStart": "08:00 AM",
+            "visitEnd": "09:00 AM",
+            "visitDuration": 60,
+            "medicalOrder": "Injection"
+        },
+        {
+            "patientName": "Martinez, Robert",
+            "servicePayer": "MTI America LPN/LVN 1.4.0",
+            "employeeName": "Washington, Kevin",
+            "employeeQualification": "LPN/LVN",
+            "visitDate": "04/04/2026",
+            "visitStart": "08:00 AM",
+            "visitEnd": "09:00 AM",
+            "visitDuration": 60,
+            "medicalOrder": "Evaluation and Treatment"
+        },
+        {
+            "patientName": "Gonzalez, Maria",
+            "servicePayer": "Aetna - Skilled Nursing RN - Standard",
+            "employeeName": "Guerra, Brendalee",
+            "employeeQualification": "Caregiver",
+            "visitDate": "04/04/2026",
+            "visitStart": "08:00 AM",
+            "visitEnd": "09:00 AM",
+            "visitDuration": 60,
+            "medicalOrder": "Woundcare"
+        },
+        {
+            "patientName": "Anderson, William",
+            "servicePayer": "BlueCross BlueShield PPO Gold Plan",
+            "employeeName": "Ogundipe, Tolani",
+            "employeeQualification": "RN",
+            "visitDate": "04/05/2026",
+            "visitStart": "08:00 AM",
+            "visitEnd": "09:00 AM",
+            "visitDuration": 60,
+            "medicalOrder": "Injection"
+        },
+        {
+            "patientName": "Gonzalez, Maria",
+            "servicePayer": "Aetna - Skilled Nursing RN - Standard",
+            "employeeName": "Ogundipe, Tolani",
+            "employeeQualification": "RN",
+            "visitDate": "03/30/2026",
+            "visitStart": "08:00 AM",
+            "visitEnd": "09:00 AM",
+            "visitDuration": 60,
+            "medicalOrder": "Evaluation and Treatment"
+        }
+    ]
+}

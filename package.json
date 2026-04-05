@@ -1,0 +1,15 @@
+{
+    "name": "automated-data-entry",
+    "version": "1.0.0",
+    "description": "Automated data entry agent for ABS Scheduling - uses Playwright to automate shift entry via the web UI",
+    "main": "automation/batch.js",
+    "scripts": {
+        "start": "node automation/batch.js",
+        "setup": "npx playwright install chromium",
+        "test": "node test/test-batch.js"
+    },
+    "dependencies": {
+        "dotenv": "^16.4.5",
+        "playwright": "^1.49.0"
+    }
+}
