@@ -83,7 +83,7 @@ async function runTests() {
     console.log('\nRunning batch entry (this may take several minutes)...\n');
 
     const startTime = Date.now();
-    const entries = loadEntriesFromFiles(['nurse-entries.json', 'caregiver-entries.json']);
+    const entries = loadEntriesFromFiles(['../samples/sample-input.json']);
     const response = await runBatch(entries, { headless: true });
     const elapsed = ((Date.now() - startTime) / 1000).toFixed(1);
 

@@ -28,11 +28,9 @@ ENVIRONMENT=sandbox
 ### Run batch processing (CLI)
 
 ```bash
-# Process default input files (nurse-entries.json + caregiver-entries.json)
-npm start
-
-# Process specific input files
-node automation/batch.js nurse-entries.json
+# Process input files (JSON or CSV)
+node automation/batch.js my-entries.json
+node automation/batch.js my-entries.csv
 
 # Run headed (visible browser)
 node automation/batch.js --headed
@@ -43,7 +41,9 @@ node automation/batch.js --cdp=http://localhost:9222
 
 ### Input files
 
-Place entry JSON files in `data/input/`. Each file should have the format:
+Place entry files (JSON or CSV) in `data/input/` and pass them as arguments. See `data/samples/` for examples.
+
+JSON format:
 
 ```json
 {

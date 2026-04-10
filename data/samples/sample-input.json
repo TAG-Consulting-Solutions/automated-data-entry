@@ -1,0 +1,30 @@
+{
+    "source": "client-browser",
+    "submittedAt": "2026-03-31T14:30:00Z",
+    "submittedBy": "Jane Doe",
+    "type": "skilled",
+    "entries": [
+        {
+            "patientName": "King, Coleman",
+            "servicePayer": "MTI America RN 1.5.0",
+            "employeeName": "Ogundipe, Tolani",
+            "employeeQualification": "RN",
+            "visitDate": "03/30/2026",
+            "visitStart": "08:00 AM",
+            "visitEnd": "09:00 AM",
+            "visitDuration": 60,
+            "medicalOrder": "Woundcare"
+        },
+        {
+            "patientName": "Roberts, Stanley Joseph",
+            "servicePayer": "Triwest Personal Care Locality 18",
+            "employeeName": "Huerta, Abilene",
+            "employeeQualification": "Caregiver",
+            "visitDate": "03/30/2026",
+            "visitStart": "12:00 PM",
+            "visitEnd": "05:00 PM",
+            "visitDuration": 300,
+            "medicalOrder": "ADLs"
+        }
+    ]
+}

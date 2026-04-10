@@ -507,17 +507,14 @@ async function injectResultsOverlay(page, response, csvString) {
             document.getElementById('ao-download-csv').addEventListener('click', (e) => {
                 e.stopPropagation();
                 e.preventDefault();
-                const blob = new Blob([csvString], { type: 'text/csv;charset=utf-8;' });
-                const url = URL.createObjectURL(blob);
                 const a = document.createElement('a');
-                a.href = url;
+                a.href = 'data:text/csv;charset=utf-8,' + encodeURIComponent(csvString);
                 const ts = new Date().toISOString().replace(/[:.]/g, '-');
                 a.download = `batch-results-${ts}.csv`;
                 a.style.display = 'none';
                 document.getElementById('automation-overlay').appendChild(a);
                 a.click();
                 a.remove();
-                setTimeout(() => URL.revokeObjectURL(url), 1000);
             });
 
             document.getElementById('ao-close-results').addEventListener('click', () => {

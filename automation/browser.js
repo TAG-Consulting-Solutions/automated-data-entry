@@ -1,13 +1,12 @@
 const { chromium } = require('playwright');
 const http = require('http');
-const fs = require('fs');
 
 let browser = null;
 let page = null;
 let isRemote = false;
 
 const BASE_URL = process.env.BASE_URL || 'http://localhost:3000';
-const DEFAULT_CDP_PORT = process.env.CDP_PORT || 9222;
+const DEFAULT_CDP_PORT = process.env.CDP_PORT || 9223;
 
 /**
  * Probe a CDP endpoint to see if a browser is listening.
@@ -26,40 +25,10 @@ function probeCDP(endpoint) {
 }
 
 /**
- * Detect the Windows host IP when running inside WSL2.
- * Returns the IP string or null if not in WSL.
- */
-function getWSLHostIP() {
-    try {
-        if (!fs.existsSync('/proc/version')) return null;
-        const version = fs.readFileSync('/proc/version', 'utf8');
-        if (!/microsoft|wsl/i.test(version)) return null;
-        // Read the Windows host IP from the default gateway
-        const { execSync } = require('child_process');
-        const ip = execSync("ip route show default | awk '{print $3}'", { encoding: 'utf8' }).trim();
-        return ip || null;
-    } catch {
-        return null;
-    }
-}
-
-/**
  * Try to find a reachable CDP endpoint on the default port.
- * Checks localhost first, then the WSL host IP if applicable.
  */
 async function findCDPEndpoint(port) {
-    // Try localhost first
-    const local = await probeCDP(`http://localhost:${port}`);
-    if (local) return local;
-
-    // In WSL2, try the Windows host IP
-    const hostIP = getWSLHostIP();
-    if (hostIP) {
-        const remote = await probeCDP(`http://${hostIP}:${port}`);
-        if (remote) return remote;
-    }
-
-    return null;
+    return probeCDP(`http://localhost:${port}`);
 }
 
 /**

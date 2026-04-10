@@ -1,0 +1,68 @@
+{
+    "processedAt": "2026-03-31T14:35:00Z",
+    "processedBy": "LLM Scheduling Agent",
+    "summary": {
+        "totalEntries": 2,
+        "success": 1,
+        "warnings": 1,
+        "failures": 0
+    },
+    "results": [
+        {
+            "status": "SUCCESS",
+            "message": "Shift created successfully. All fields matched exactly.",
+            "input": {
+                "patientName": "King, Coleman",
+                "servicePayer": "MTI America RN 1.5.0",
+                "employeeName": "Ogundipe, Tolani",
+                "employeeQualification": "RN",
+                "visitDate": "03/30/2026",
+                "visitStart": "08:00 AM",
+                "visitEnd": "09:00 AM",
+                "visitDuration": 60,
+                "medicalOrder": "Woundcare"
+            },
+            "resolved": {
+                "patientId": 1001,
+                "patientName": "King, Coleman",
+                "productPayerId": "P002",
+                "productPayerName": "MTI America RN 1.5.0",
+                "employeeId": "E001",
+                "employeeName": "Ogundipe, Tolani",
+                "position": "RN",
+                "start": "03/30/2026 08:00 AM",
+                "end": "03/30/2026 09:00 AM"
+            },
+            "warnings": []
+        },
+        {
+            "status": "WARNING",
+            "message": "Shift created with caveats. Review warnings below.",
+            "input": {
+                "patientName": "Roberts, Stanley Joseph",
+                "servicePayer": "Triwest Personal Care Locality 18",
+                "employeeName": "Huerta, Abilene",
+                "employeeQualification": "Caregiver",
+                "visitDate": "03/30/2026",
+                "visitStart": "12:00 PM",
+                "visitEnd": "05:00 PM",
+                "visitDuration": 300,
+                "medicalOrder": "ADLs"
+            },
+            "resolved": {
+                "patientId": 1002,
+                "patientName": "Roberts, Stanley Joseph",
+                "productPayerId": "P003",
+                "productPayerName": "Triwest - Personal Care - Locality 18",
+                "employeeId": "E003",
+                "employeeName": "Huerta, Abilene",
+                "position": "Caregiver",
+                "start": "03/30/2026 12:00 PM",
+                "end": "03/30/2026 05:00 PM"
+            },
+            "warnings": [
+                "Service payer fuzzy matched: 'Triwest Personal Care Locality 18' → 'Triwest - Personal Care - Locality 18' (similarity: 0.72)"
+            ]
+        }
+    ]
+}
