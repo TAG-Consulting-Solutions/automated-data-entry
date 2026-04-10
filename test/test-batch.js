@@ -7,7 +7,8 @@ require('dotenv').config();
 const http = require('http');
 const fs = require('fs');
 const path = require('path');
-const { runBatch } = require('../automation/batch');
+const { runBatch, loadEntriesFromFiles } = require('../automation/batch');
+const { parseCSV, resultsToCSV } = require('../automation/csv');
 
 const BASE_URL = process.env.BASE_URL || 'http://localhost:3000';
 
@@ -82,7 +83,8 @@ async function runTests() {
     console.log('\nRunning batch entry (this may take several minutes)...\n');
 
     const startTime = Date.now();
-    const response = await runBatch(['nurse-entries.json', 'caregiver-entries.json'], { headless: true });
+    const entries = loadEntriesFromFiles(['nurse-entries.json', 'caregiver-entries.json']);
+    const response = await runBatch(entries, { headless: true });
     const elapsed = ((Date.now() - startTime) / 1000).toFixed(1);
 
     console.log(`Batch completed in ${elapsed}s\n`);
@@ -168,10 +170,12 @@ async function runTests() {
     assert(createdShifts.length === successEntries.length,
         `Shift count (${createdShifts.length}) matches success+warning count (${successEntries.length})`);
 
-    // 10. Check output file was written
-    const outputDir = path.join(__dirname, '..', 'data', 'output');
-    const outputFiles = fs.readdirSync(outputDir).filter(f => f.startsWith('batch-response-'));
-    assert(outputFiles.length > 0, `Output file written to data/output/ (${outputFiles.length} file(s))`);
+    // 10. Verify CSV round-trip (no files written to disk)
+    const csv = resultsToCSV(response);
+    assert(typeof csv === 'string' && csv.length > 0, 'resultsToCSV produces non-empty string');
+    const csvLines = csv.split('\n');
+    assert(csvLines.length === results.length + 1, `CSV has header + ${results.length} data rows (got ${csvLines.length} lines)`);
+    assert(csvLines[0].startsWith('status,message,'), 'CSV header starts with expected columns');
 
     // Summary
     console.log(`\n=== Test Results: ${passed} passed, ${failed} failed ===\n`);
