@@ -447,11 +447,11 @@ async function injectProgressOverlay(page, total) {
 
 /**
  * Inject a results overlay showing the automation outcome.
- * Returns a Promise that resolves with { action: 'download' } or { action: 'close' }.
- * File saving is handled by the caller in Node.js.
+ * Includes a "Download Results CSV" button that generates the file client-side.
+ * Returns a Promise that resolves when the user clicks Close.
  */
-async function injectResultsOverlay(page, response) {
-    return page.evaluate(({ styles, response, logo }) => {
+async function injectResultsOverlay(page, response, csvString) {
+    return page.evaluate(({ styles, response, csvString, logo }) => {
         return new Promise((resolve) => {
             const existing = document.getElementById('automation-overlay');
             if (existing) existing.remove();
@@ -517,17 +517,25 @@ async function injectResultsOverlay(page, response) {
             `;
             document.body.appendChild(overlay);
 
-            document.getElementById('ao-download-csv').addEventListener('click', () => {
-                overlay.remove();
-                resolve({ action: 'download' });
+            document.getElementById('ao-download-csv').addEventListener('click', (e) => {
+                e.stopPropagation();
+                e.preventDefault();
+                const a = document.createElement('a');
+                a.href = 'data:text/csv;charset=utf-8,' + encodeURIComponent(csvString);
+                const ts = new Date().toISOString().replace(/[:.]/g, '-');
+                a.download = `batch-results-${ts}.csv`;
+                a.style.display = 'none';
+                document.getElementById('automation-overlay').appendChild(a);
+                a.click();
+                a.remove();
             });
 
             document.getElementById('ao-close-results').addEventListener('click', () => {
                 overlay.remove();
-                resolve({ action: 'close' });
+                resolve();
             });
         });
-    }, { styles: OVERLAY_STYLES, response, logo: NUVITA_LOGO });
+    }, { styles: OVERLAY_STYLES, response, csvString, logo: NUVITA_LOGO });
 }
 
 module.exports = {
