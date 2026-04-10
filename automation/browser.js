@@ -88,7 +88,7 @@ async function launchBrowser(opts = true) {
 
     browser = await chromium.launch({ headless });
     isRemote = false;
-    const context = await browser.newContext();
+    const context = await browser.newContext({ acceptDownloads: true, viewport: null });
     page = await context.newPage();
     return page;
 }

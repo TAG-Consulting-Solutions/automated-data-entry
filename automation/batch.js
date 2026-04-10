@@ -41,10 +41,7 @@ function loadEntriesFromFile(filePath) {
 /**
  * Load and merge entries from multiple files on disk.
  */
-function loadEntriesFromFiles(inputFiles = []) {
-    if (inputFiles.length === 0) {
-        throw new Error('No input files specified. Provide file names as arguments.');
-    }
+function loadEntriesFromFiles(inputFiles = ['nurse-entries.json', 'caregiver-entries.json']) {
     const allEntries = [];
     for (const file of inputFiles) {
         allEntries.push(...loadEntriesFromFile(file));
@@ -168,21 +165,15 @@ async function runBatch(entries, options = {}) {
 }
 
 /**
- * Enable programmatic downloads in a CDP-connected browser.
- * Without this, Chrome ignores the `download` attribute on blob/data URIs.
+ * Copy a file to the user's Downloads folder.
  */
-async function enableDownloads(page) {
-    try {
-        const session = await page.context().newCDPSession(page);
-        const downloadPath = path.join(os.homedir(), 'Downloads');
-        await session.send('Browser.setDownloadBehavior', {
-            behavior: 'allow',
-            downloadPath
-        });
-    } catch (e) {
-        // Non-fatal — fallback CSV is still written to data/output/
-        console.warn('Could not enable CDP downloads:', e.message);
-    }
+function copyToDownloads(srcPath) {
+    const downloadsDir = path.join(os.homedir(), 'Downloads');
+    const fileName = path.basename(srcPath);
+    const destPath = path.join(downloadsDir, fileName);
+    fs.copyFileSync(srcPath, destPath);
+    console.log(`CSV copied to: ${destPath}`);
+    return destPath;
 }
 
 /**
@@ -253,16 +244,15 @@ async function runToastMode(page, cdpEndpoint) {
 
         await progress.done();
 
-        // Step 6: Generate CSV string and write to data/output as reliable fallback
-        const resultsCsv = resultsToCSV(response);
+        // Step 6: Write results CSV to data/output
         const outputPath = writeOutputCSV(response, path.join(DATA_DIR, 'output'));
         console.log(`Results CSV written to: ${outputPath}`);
 
-        // Step 7: Enable downloads via CDP so the browser honours the download attribute
-        await enableDownloads(page);
-
-        // Step 8: Show results overlay with download button — wait for user to close
-        await injectResultsOverlay(page, response, resultsCsv);
+        // Step 7: Show results overlay — wait for user action
+        const { action } = await injectResultsOverlay(page, response);
+        if (action === 'download') {
+            copyToDownloads(outputPath);
+        }
 
         return response;
     }
@@ -391,16 +381,15 @@ async function runInteractiveMode(page, cdpEndpoint) {
                 }, choice.fileKey);
             }
 
-            // Write results CSV to data/output as reliable fallback
-            const resultsCsv = resultsToCSV(response);
+            // Write results CSV to data/output
             const outputPath = writeOutputCSV(response, path.join(DATA_DIR, 'output'));
             console.log(`Results CSV written to: ${outputPath}`);
 
-            // Enable downloads via CDP so the browser honours the download attribute
-            await enableDownloads(page);
-
             // Show results with download button
-            await injectResultsOverlay(page, response, resultsCsv);
+            const { action } = await injectResultsOverlay(page, response);
+            if (action === 'download') {
+                copyToDownloads(outputPath);
+            }
         }
 
         if (!response) {
@@ -455,14 +444,11 @@ if (require.main === module) {
             process.exit(1);
         });
     } else {
-        // File-based mode
+        // Legacy file-based mode
         const inputFiles = args.filter(a => !a.startsWith('--'));
-        if (inputFiles.length === 0) {
-            console.error('No input files specified. Provide file names as arguments (JSON or CSV).');
-            process.exit(1);
-        }
+        const files = inputFiles.length > 0 ? inputFiles : ['nurse-entries.json', 'caregiver-entries.json'];
 
-        const entries = loadEntriesFromFiles(inputFiles);
+        const entries = loadEntriesFromFiles(files);
         runBatch(entries, { headless, cdpEndpoint })
             .then(response => {
                 if (outputCSV) {
